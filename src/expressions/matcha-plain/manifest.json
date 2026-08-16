@@ -1,0 +1,23 @@
+{
+  "id": "matcha-plain",
+  "name": "抹茶旦旦",
+  "defaultExpressionId": "ok",
+  "expressions": [
+    { "id": "flowers", "name": "送花", "color": "#f2a6c0", "text": "💐", "image": "/expressions/matcha-plain/抹茶旦旦_1_1.png" },
+    { "id": "cry", "name": "大哭", "color": "#7fb8d8", "text": "😭", "image": "/expressions/matcha-plain/抹茶旦旦_1_2.png" },
+    { "id": "sad", "name": "难过", "color": "#7fb8d8", "text": "😢", "image": "/expressions/matcha-plain/抹茶旦旦_1_3.png" },
+    { "id": "speechless", "name": "无语", "color": "#c0c0c0", "text": "😑", "image": "/expressions/matcha-plain/抹茶旦旦_1_4.png" },
+    { "id": "haha", "name": "哈哈", "color": "#f7d774", "text": "😆", "image": "/expressions/matcha-plain/抹茶旦旦_1_5.png" },
+    { "id": "cool", "name": "酷", "color": "#9ad4d6", "text": "😎", "image": "/expressions/matcha-plain/抹茶旦旦_2_1.png" },
+    { "id": "ok", "name": "OK", "color": "#b8d8b8", "text": "👌", "image": "/expressions/matcha-plain/抹茶旦旦_2_2.png" },
+    { "id": "question", "name": "问号", "color": "#c9a7e8", "text": "❓", "image": "/expressions/matcha-plain/抹茶旦旦_2_3.png" },
+    { "id": "angry", "name": "生气", "color": "#e88b7d", "text": "😠", "image": "/expressions/matcha-plain/抹茶旦旦_2_4.png" },
+    { "id": "hit", "name": "打", "color": "#e8c07d", "text": "👊", "image": "/expressions/matcha-plain/抹茶旦旦_2_5.png" },
+    { "id": "daze", "name": "呆滞", "color": "#c0c0c0", "text": "😶", "image": "/expressions/matcha-plain/抹茶旦旦_3_1.png" },
+    { "id": "shy", "name": "羞涩", "color": "#f2a6c0", "text": "😳", "image": "/expressions/matcha-plain/抹茶旦旦_3_2.png" },
+    { "id": "sweat", "name": "汗", "color": "#9ad4d6", "text": "😓", "image": "/expressions/matcha-plain/抹茶旦旦_3_3.png" },
+    { "id": "love", "name": "小心心", "color": "#e879b8", "text": "💗", "image": "/expressions/matcha-plain/抹茶旦旦_3_4.png" },
+    { "id": "hum", "name": "哼", "color": "#e88b7d", "text": "😤", "image": "/expressions/matcha-plain/抹茶旦旦_3_5.png" },
+    { "id": "confused", "name": "嗯嗯", "color": "#c9a7e8", "text": "🤔", "image": "/expressions/matcha-plain/抹茶旦旦_4_1.png" }
+  ]
+}

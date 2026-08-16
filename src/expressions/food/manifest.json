@@ -1,0 +1,11 @@
+{
+  "id": "food",
+  "name": "干饭表情包",
+  "defaultExpressionId": "hungry",
+  "expressions": [
+    { "id": "hungry", "name": "好饿", "color": "#f0b37e", "text": "🍽️" },
+    { "id": "eating", "name": "干饭", "color": "#f0d78c", "text": "😋" },
+    { "id": "full", "name": "吃撑", "color": "#b8d8b8", "text": "😌" },
+    { "id": "drool", "name": "流口水", "color": "#9ad4d6", "text": "🤤" }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "matcha",
+  "name": "抹茶旦旦大头贴",
+  "defaultExpressionId": "smile",
+  "expressions": [
+    { "id": "playful", "name": "顽皮", "color": "#9ed17a", "text": "😝", "image": "/expressions/matcha/抹茶旦旦大头贴_1_1.png" },
+    { "id": "hot", "name": "热", "color": "#f0a35e", "text": "🥵", "image": "/expressions/matcha/抹茶旦旦大头贴_1_2.png" },
+    { "id": "sigh", "name": "叹气", "color": "#7fb8d8", "text": "😮‍💨", "image": "/expressions/matcha/抹茶旦旦大头贴_1_3.png" },
+    { "id": "celebrate", "name": "庆祝", "color": "#f7d774", "text": "🎉", "image": "/expressions/matcha/抹茶旦旦大头贴_1_4.png" },
+    { "id": "think", "name": "思索", "color": "#c9a7e8", "text": "🤔", "image": "/expressions/matcha/抹茶旦旦大头贴_1_5.png" },
+    { "id": "sweat", "name": "汗颜", "color": "#9ad4d6", "text": "😅", "image": "/expressions/matcha/抹茶旦旦大头贴_2_1.png" },
+    { "id": "smile", "name": "微笑", "color": "#9ed17a", "text": "🙂", "image": "/expressions/matcha/抹茶旦旦大头贴_2_2.png" },
+    { "id": "upset", "name": "委屈", "color": "#7fb8d8", "text": "🥺", "image": "/expressions/matcha/抹茶旦旦大头贴_2_3.png" },
+    { "id": "love", "name": "情书", "color": "#e879b8", "text": "💌", "image": "/expressions/matcha/抹茶旦旦大头贴_2_4.png" },
+    { "id": "ok", "name": "OK", "color": "#b8d8b8", "text": "👌", "image": "/expressions/matcha/抹茶旦旦大头贴_2_5.png" },
+    { "id": "surrender", "name": "投降", "color": "#e8c07d", "text": "🏳️", "image": "/expressions/matcha/抹茶旦旦大头贴_3_1.png" },
+    { "id": "slack", "name": "摸鱼", "color": "#a8c8e8", "text": "🐟", "image": "/expressions/matcha/抹茶旦旦大头贴_3_2.png" },
+    { "id": "point", "name": "指", "color": "#d8b0e8", "text": "👉", "image": "/expressions/matcha/抹茶旦旦大头贴_3_3.png" },
+    { "id": "punch", "name": "重拳出击", "color": "#e88b7d", "text": "👊", "image": "/expressions/matcha/抹茶旦旦大头贴_3_4.png" },
+    { "id": "snicker", "name": "偷笑", "color": "#c9d87a", "text": "🤭", "image": "/expressions/matcha/抹茶旦旦大头贴_3_5.png" },
+    { "id": "sick", "name": "生病", "color": "#b0c8c8", "text": "🤒", "image": "/expressions/matcha/抹茶旦旦大头贴_4_1.png" }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "basic",
+  "name": "基础表情包",
+  "defaultExpressionId": "smile",
+  "expressions": [
+    { "id": "smile", "name": "微笑", "color": "#9ed17a", "text": "🙂" },
+    { "id": "happy", "name": "开心", "color": "#f7d774", "text": "😄" },
+    { "id": "sad", "name": "难过", "color": "#7fb8d8", "text": "😢" },
+    { "id": "angry", "name": "生气", "color": "#e88b7d", "text": "😠" },
+    { "id": "surprised", "name": "惊讶", "color": "#c9a7e8", "text": "😲" }
+  ]
+}
