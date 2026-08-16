@@ -27,111 +27,97 @@
 - 负面表现：饱食度或精力过低时，小鳄龙会“发抖”（CSS shake）
 - 存档：localStorage 自动保存
 
-## 运行
+## 按平台运行
 
-```bash
-cd xiaoelong-pet
+### Windows（PowerShell）
+
+```powershell
+cd E:\Codefield\XiaoELong\xiaoelong-pet
 npm install
 npm run dev
 ```
 
-开发服务器默认运行在 `http://localhost:5174`。
+- 开发地址：`http://localhost:5174`
+- 停止：`Ctrl + C`
 
-## 目录结构
-
-```text
-xiaoelong-pet/
-├── public/
-│   ├── expressions/matcha/        # 抹茶旦旦大头贴（透明底，已居中）
-│   ├── expressions/matcha-plain/  # 抹茶旦旦（透明底，已居中）
-│   └── expressions/dinosaur/      # 真的是小恐龙吗（保留白边，已居中）
-├── src/
-│   ├── components/       # 状态/宠物展示/行为/表情/事件记录
-│   ├── expressions/      # 表情包目录（每个文件夹一个包）
-│   │   ├── matcha/manifest.json
-│   │   ├── matcha-plain/manifest.json
-│   │   ├── dinosaur/manifest.json
-│   │   ├── basic/manifest.json
-│   │   └── food/manifest.json
-│   ├── types.ts          # 宠物状态、行为、表情类型
-│   ├── constants.ts      # 数值、衰减、行为、随机事件配置
-│   ├── usePet.ts         # 核心状态逻辑
-│   └── utils/            # 成长模拟、存档
-├── package.json
-└── vite.config.ts
-```
-
-## 表情包扩展方式
-
-1. 在 `src/expressions/` 下新建文件夹，例如 `src/expressions/my-pack/manifest.json`。
-2. 按以下格式编写清单：
-
-```json
-{
-  "id": "my-pack",
-  "name": "我的表情包",
-  "defaultExpressionId": "hello",
-  "expressions": [
-    {
-      "id": "hello",
-      "name": "打招呼",
-      "color": "#abcdef",
-      "text": "👋"
-    }
-  ]
-}
-```
-
-3. 在 `src/expressions/index.ts` 中引入该 manifest 并加入 `expressionPacks` 数组。
-
-真实贴图已通过 `ExpressionItem.image` 接入，`PetView` 会优先渲染图片；后续如需精灵图坐标，可以使用 `sprite` 字段。
-
-## 后续规划
-
-- 继续扩展更多表情包/真实贴图
-- 更多成长阶段美术
-- 更丰富的随机事件
-- 与小鳄龙现有 Electron / 后端结构做可移植组件化
-
-## 部署 / 开箱即用
-
-### 如果已经安装 Node.js
-
-开发调试：
+### Linux / WSL（bash）
 
 ```bash
-cd xiaoelong-pet
+cd /mnt/e/Codefield/XiaoELong/xiaoelong-pet
 npm install
 npm run dev
 ```
 
-构建生产版本：
+### macOS（终端）
+
+```bash
+cd /path/to/xiaoelong-pet
+npm install
+npm run dev
+```
+
+> npm 命令三个平台基本一致，主要差异是路径写法。
+
+## 构建与托管
+
+### 1. 构建生产版本
+
+所有平台都一样：
 
 ```bash
 npm run build
 ```
 
-构建结果在 `dist/` 目录，可以直接部署到任意静态服务器。
+构建产物在：
 
-本地预览构建结果：
+```text
+dist/
+```
+
+### 2. 本地预览
 
 ```bash
 npm run preview
 ```
 
-### 如果没有安装 Node.js
+### 3. 托管方式
 
-最终使用小鳄龙的人**不需要安装 Node.js**。只要构建过一次，把 `dist/` 目录交给对方即可：
+#### 方式 A：GitHub Pages（推荐，免费）
 
-1. 在开发机上执行 `npm run build`
-2. 将整个 `dist/` 目录上传到：
-   - GitHub Pages
-   - Netlify / Vercel
-   - 任意 Nginx / Apache 静态目录
-   - 或者局域网内用任意静态文件服务器托管
-3. 对方只需要用浏览器打开网址，不需要安装 Node.js
+仓库已经附带 GitHub Actions 工作流：
 
-如果以后需要“双击就能运行”的桌面版，可以再用 Electron 打包成 Windows/macOS 安装包；当前 v0.1 暂不内置该能力。
+```text
+.github/workflows/deploy-pages.yml
+```
+
+1. 推送 `main` 分支后，Actions 会自动构建并发布。
+2. 到 GitHub 仓库 **Settings → Pages**，把 **Source** 设置为 `GitHub Actions`。
+3. 第一次运行成功后，访问：
+
+```text
+https://MXo-oDMX.github.io/XiaoELong-Pet/
+```
+
+#### 方式 B：Netlify Drop / Vercel
+
+- 先执行一次 `npm run build`
+- 打开 Netlify Drop 或 Vercel
+- 直接把 `dist/` 文件夹拖进去
+- 得到一个公开网址，不需要 Node.js
+
+#### 方式 C：任意静态服务器
+
+把 `dist/` 整个目录放到：
+
+- Nginx / Apache
+- 对象存储 / CDN
+- 或者局域网内任意静态文件服务器
+
+### 4. 没有安装 Node.js 的人怎么用
+
+最终使用者不需要安装 Node.js。你只需要把托管好的网址发给对方，对方用浏览器打开即可。
+
+如果以后想做成“双击就能运行”的桌面版，可以再用 Electron 打包。
 
 ## 贴图协作（后续）
 
