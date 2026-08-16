@@ -3,6 +3,8 @@
 独立开发的 React + Vite + TypeScript 宠物养成 v0.1。
 目标：先跑通核心玩法与表情扩展机制，后续可移植进 XiaoELong 桌面组件。
 
+> 🌐 在线体验：**https://MXo-oDMX.github.io/XiaoELong-Pet/**
+
 ## 已实现
 
 - 状态参数：饱食度、情绪值、精力、亲密度、经验/等级
