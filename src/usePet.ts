@@ -16,6 +16,7 @@ import { createId } from './utils/id';
 import {
   applyEffects,
   createInitialState,
+  growthStageForLevel,
   simulateOffline,
   simulateOnlineTick,
 } from './utils/simulation';
@@ -120,6 +121,7 @@ export function usePet() {
 
   const playExpression = (packId: string, expressionId: string) => {
     setState((prev) => {
+      if (growthStageForLevel(prev.stats.level) === 'egg') return prev;
       const { stats } = applyEffects(prev.stats, { exp: EXPRESSION_EXP });
       return {
         ...prev,

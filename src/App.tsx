@@ -4,9 +4,11 @@ import { EventLog } from './components/EventLog';
 import { ExpressionPanel } from './components/ExpressionPanel';
 import { PetView } from './components/PetView';
 import { StatusPanel } from './components/StatusPanel';
+import { growthStageForLevel } from './utils/simulation';
 
 export default function App() {
   const { state, performAction, playExpression, resetGame } = usePet();
+  const isEgg = growthStageForLevel(state.stats.level) === 'egg';
 
   return (
     <main className="app">
@@ -21,11 +23,18 @@ export default function App() {
         <StatusPanel state={state} />
         <div className="main-column">
           <PetView state={state} />
-          <ExpressionPanel
-            activePackId={state.expressionPackId}
-            activeExpressionId={state.expressionId}
-            onSelect={playExpression}
-          />
+          {isEgg ? (
+            <div className="panel egg-hint">
+              <h2>孵化中</h2>
+              <p>小鳄龙还在蛋里，暂时不能做表情。先好好照顾它，等孵出来再一起玩表情吧。</p>
+            </div>
+          ) : (
+            <ExpressionPanel
+              activePackId={state.expressionPackId}
+              activeExpressionId={state.expressionId}
+              onSelect={playExpression}
+            />
+          )}
         </div>
         <div className="side-column">
           <ActionPanel onAction={performAction} />

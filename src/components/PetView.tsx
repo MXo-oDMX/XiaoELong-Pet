@@ -18,10 +18,15 @@ export function PetView({ state }: { state: PetState }) {
           style={{
             width: stageInfo.size,
             height: stageInfo.size,
-            backgroundColor: expression?.color ?? '#9ed17a',
+            backgroundColor: stageInfo.egg ? '#f2e8d5' : (expression?.color ?? '#9ed17a'),
           }}
         >
-          {expression?.image ? (
+          {stageInfo.egg ? (
+            <>
+              <span className="pet-face">🥚</span>
+              <span className="pet-stage-label">蛋</span>
+            </>
+          ) : expression?.image ? (
             <img
               className="pet-expression-image"
               src={expression.image}
@@ -31,7 +36,6 @@ export function PetView({ state }: { state: PetState }) {
           ) : (
             <span className="pet-face">{expression?.text ?? '🐊'}</span>
           )}
-          {stageInfo.egg && <span className="pet-stage-label">蛋</span>}
         </div>
       </div>
       <div className="pet-caption">

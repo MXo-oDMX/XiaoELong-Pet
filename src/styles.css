@@ -420,3 +420,20 @@ body {
     min-height: 220px;
   }
 }
+
+/* 蛋阶段提示 */
+.egg-hint {
+  margin-top: 14px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.egg-hint h2 {
+  margin-bottom: 6px;
+}
+
+.egg-hint p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
