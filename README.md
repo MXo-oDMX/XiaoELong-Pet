@@ -3,7 +3,7 @@
 独立开发的 React + Vite + TypeScript 宠物养成 v0.1。
 目标：先跑通核心玩法与表情扩展机制，后续可移植进 XiaoELong 桌面组件。
 
-> 🌐 在线体验：**https://MXo-oDMX.github.io/XiaoELong-Pet/**
+> 🌐 在线体验：**https://mxo-odmx.github.io/XiaoELong-Pet/**
 
 ## 已实现
 
@@ -97,7 +97,7 @@ npm run preview
 3. 第一次运行成功后，访问：
 
 ```text
-https://MXo-oDMX.github.io/XiaoELong-Pet/
+https://mxo-odmx.github.io/XiaoELong-Pet/
 ```
 
 #### 方式 B：Netlify Drop / Vercel
